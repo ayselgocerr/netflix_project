@@ -1,0 +1,127 @@
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+   }
+   
+   body, html {
+     height: 100%;
+     margin: 0;
+     font-family: 'Arial', sans-serif;
+     background-color: #0b0808;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+   }
+
+   .logo {
+    width: 200px;
+    margin: 0 auto;
+    position: absolute; /* Pozisyonu sayfanın sol üst köşesine göre ayarlayacak */
+    top: 0;
+    left: 0;
+ 
+  }
+
+
+   .profile-container h1 {
+     color: #aaa9a9;
+     font-size: 24px;
+     text-align: center;
+     margin: 20px 0;
+     margin-top: 100px;
+     }
+
+    .profiles {
+    display: flex;
+    justify-content: center; /* Flex öğeleri yatay olarak ortalar */
+    flex-wrap: wrap; /* Ekran genişliğine göre öğeleri alt satıra taşır */
+    margin-top: 20px; 
+    text-decoration: none;
+  }
+     
+    .profile {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     cursor: pointer;
+     transition: transform 0.2s ease-in-out;
+     margin: 3px;
+     }
+     
+     .profile:hover {
+     transform: scale(1.1);
+     }
+     
+     
+     .profile img {
+     width: 100px; 
+     height: 100px;
+ 
+     border: 3px solid #e50914;
+    padding: 5px; 
+    background-color: #333; 
+    margin-bottom: 10px; /* İsim ve resim arasında boşluk */
+ }
+
+ .profile span {
+  color: #9b9999;
+  font-size: 16px;
+  margin-top: 5px;
+  text-decoration: none;
+}
+
+
+.profile-management {
+  text-align: center; 
+  margin-top: 30px;
+}
+
+.profile-management button {
+  padding: 7px 100px; 
+  font-size: 16px;
+  color: #979292; 
+  background-color: #625c5c;
+  border: 1px solid #fff;
+  border-radius: 4px; 
+  cursor: pointer; 
+  transition: background-color 0.3s ease; 
+}
+
+.profile-management button:hover {
+  background-color: #e50914;}
+
+  
+@media only screen and (max-width: 960px) {
+  .logo{
+    width: 150px;
+  }
+  .profile-container h1 {
+    font-size: 20px;
+  }
+
+  .profile img {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .logo{
+    width: 120px;
+  }
+
+  .profile {
+    margin: 7px;
+  }
+
+  .profile img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .profile span {
+    font-size: 14px;
+  }
+}
+
